@@ -8,7 +8,7 @@ import me.ThaH3lper.com.Skills.SkillHandler;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
-import org.bukkit.craftbukkit.v1_6_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_7_R1.CraftWorld;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Creature;
 import org.bukkit.entity.Egg;
@@ -70,7 +70,7 @@ public class SkillShootProjectile {
                 if((l instanceof Creature) && ((Creature)l).getTarget() == player)	{
                     projectile = l.launchProjectile(projectileClass);
                 	projectile.setVelocity(l.getLocation().getDirection().multiply(velocity));
-                	EpicBoss.plugin.logger.info("Fired!");
+                	//EpicBoss.plugin.logger.info("Fired!");
                 }	else	{
                 	projectile = l.launchProjectile(projectileClass);
                 	Vector facing = player.getLocation().toVector().subtract(l.getLocation().toVector()).normalize().multiply(velocity);                
